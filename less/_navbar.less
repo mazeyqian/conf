@@ -152,7 +152,7 @@
 .navbar-brand {
   float: left;
   // padding: @navbar-padding-vertical @navbar-padding-horizontal;
-  padding: 22px 30px 0 15px;
+  padding: 10px 30px 0 15px;
   font-size: @font-size-large;
   line-height: @line-height-computed;
 
@@ -247,10 +247,8 @@
     > li {
       float: left;
       > a {
-        // padding-top: ((@navbar-height - @line-height-computed) / 2);
-        // padding-bottom: ((@navbar-height - @line-height-computed) / 2);
-        padding: 30px 30px 14px;
-		    font-size: 18px;
+        padding-top: ((@navbar-height - @line-height-computed) / 2);
+        padding-bottom: ((@navbar-height - @line-height-computed) / 2);
       }
     }
   }
@@ -377,26 +375,16 @@
     > li > a {
       color: @navbar-default-link-color;
 
-      .icon { // added rule set
-      	color: @gray-light;
-      }
-
       &:hover,
-      &:focus,
-      &:hover .icon, // added selector
-      &:focus .icon { // added selector
+      &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
       }
-
     }
     > .active > a {
       &,
       &:hover,
-      &:focus,
-      .icon, // added selector
-      &:hover .icon, // added selector
-      &:focus .icon { // added selector
+      &:focus {
         color: @navbar-default-link-active-color;
         background-color: @navbar-default-link-active-bg;
       }

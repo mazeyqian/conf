@@ -7,9 +7,8 @@
 .carousel {
   position: relative;
 
-  padding-top: 4px; // added
-  padding-bottom: 28px; // added
-  background-color: @gray-lighter; // added
+  padding: 2px 2px 20px; // added
+  background-color: hsla(0,0%,0%,0.1); // added
 
 }
 
@@ -95,12 +94,12 @@
 
   // Set gradients for backgrounds
   &.left {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    // #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001)); // removed
   }
   &.right {
     left: auto;
     right: 0;
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    // #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5)); // removed
   }
 
   // Hover/focus state
@@ -133,12 +132,13 @@
     right: 20%; // edited was 50%
   }
   .icon-prev,
-  .icon-next {
+  .icon-next,
+  .icon { // added to grab our icons
     width:  20px;
     height: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
-    font-family: serif;
+    margin-top: -14px; // edited
+    // margin-left: -10px; // not needed
+    // font-family: serif; // breaks font icon
   }
 
   .icon-prev {
@@ -172,8 +172,8 @@
 
   li {
     display: inline-block;
-    width:  18px; // edited
-    height: 18px; // edited
+    width:  12px; // edited
+    height: 12px; // edited
     // margin: 1px; // edited
     text-indent: -999px;
     background-color: @carousel-indicator-bg; // added

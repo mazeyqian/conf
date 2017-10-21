@@ -1,11 +1,11 @@
-Property of Bootstrap-enterprise
+Property of [Your Name Here]
 
 # Includes open source libraries
 * [HTML5 Boilerplate](http://h5bp.com/)
 * [Bootstrap](http://getbootstrap.com/)
 
 # License
-Copyright (c) Mazey
+Copyright (c) [Your Name Here]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
