@@ -1,3 +1,4 @@
-# robotstxt.org/
+# mazey
 
 User-agent: *
+Disallow: 
