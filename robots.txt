@@ -1,4 +1,0 @@
-# mazey
-
-User-agent: *
-Disallow: 
