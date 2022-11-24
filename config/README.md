@@ -8,16 +8,17 @@ The configuration files of Nginx and Supervisor.
   - [Nginx in Tokyo](#nginx-in-tokyo)
   - [Nginx in Mac B](#nginx-in-mac-b)
   - [Supervisor in Mac B](#supervisor-in-mac-b)
+  - [Supervisor in Guangzhou lighthouse](#supervisor-in-guangzhou-lighthouse)
   - [Reference](#reference)
 
 ## Nginx in Guangzhou lighthouse
 
-Edit in the default config: `include /web/feperf.com.conf.d/config/nginxnode/*.conf;`.
+Edit in the default config: `include /web/conf/config/nginxnode/*.conf;`.
 
 Update Nginx server.
 
 ```
-cd /web/feperf.com.conf.d && git pull && service nginx restart
+cd /web/conf && git pull && service nginx restart
 ```
 
 ## Nginx in Guangzhou cvm
@@ -26,12 +27,12 @@ Update Nginx server.
 
 ## Nginx in Tokyo
 
-Edit in the default config: `include /web/feperf.com.conf.d/config/nginxgee/*.conf;`.
+Edit in the default config: `include /web/conf/config/nginxgee/*.conf;`.
 
 Update Nginx server.
 
 ```
-cd /web/feperf.com.conf.d && git pull && systemctl restart nginx
+cd /web/conf && git pull && systemctl restart nginx
 ```
 
 ## Nginx in Mac B
@@ -42,7 +43,7 @@ nginx -s reload
 
 ## Supervisor in Mac B
 
-Edit in the `/usr/local/etc/supervisord.conf`: `files = /Users/mazey/Web/Mazey/feperf.com.conf.d/config/supervisorb/*.ini`.
+Edit in the `/usr/local/etc/supervisord.conf`: `files = /Users/mazey/Web/Mazey/conf/config/supervisorb/*.ini`.
 
 ```
 brew services restart supervisor
@@ -50,7 +51,7 @@ brew services restart supervisor
 
 ## Supervisor in Guangzhou lighthouse
 
-Edit in the `/etc/supervisord.conf`: `files = /web/feperf.com.conf.d/config/supervisornode/*.ini`.
+Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisornode/*.ini`.
 
 ```
 # Init First
