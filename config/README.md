@@ -3,6 +3,7 @@
 The configuration files of Nginx and Supervisor.
 
 - [config](#config)
+  - [Nginx Configuration](#nginx-configuration)
   - [Nginx in Guangzhou lighthouse](#nginx-in-guangzhou-lighthouse)
   - [Nginx in Guangzhou cvm](#nginx-in-guangzhou-cvm)
   - [Nginx in Tokyo](#nginx-in-tokyo)
@@ -10,6 +11,20 @@ The configuration files of Nginx and Supervisor.
   - [Supervisor in Mac B](#supervisor-in-mac-b)
   - [Supervisor in Guangzhou lighthouse](#supervisor-in-guangzhou-lighthouse)
   - [Reference](#reference)
+
+## Nginx Configuration
+
+Centos:
+
+```
+vim /etc/nginx/nginx.conf
+```
+
+Mac:
+
+```
+vim /usr/local/etc/nginx/nginx.conf
+```
 
 ## Nginx in Guangzhou lighthouse
 
