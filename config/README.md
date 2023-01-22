@@ -11,6 +11,7 @@ The configuration files of Nginx and Supervisor.
   - [Nginx in Mac B](#nginx-in-mac-b)
   - [Supervisor in Mac B](#supervisor-in-mac-b)
   - [Supervisor in Guangzhou lighthouse](#supervisor-in-guangzhou-lighthouse)
+  - [Supervisor in Japan Vultr](#supervisor-in-japan-vultr)
   - [Reference](#reference)
 
 ## Nginx Configuration
@@ -91,6 +92,16 @@ systemctl enable supervisord
 
 # Restart
 systemctl restart supervisord
+```
+
+## Supervisor in Japan Vultr
+
+Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisorjapan/*.ini`.
+
+```
+vim /etc/supervisord.conf
+
+/web/conf/config/supervisorjapan/*.ini
 ```
 
 ## Reference
