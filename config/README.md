@@ -106,4 +106,4 @@ vim /etc/supervisord.conf
 
 ## Reference
 
-- http://nginx.org/en/docs/http/server_names.html
+- [Server names](http://nginx.org/en/docs/http/server_names.html)
