@@ -3,18 +3,22 @@
 The configuration files of Nginx and Supervisor.
 
 - [config](#config)
-  - [Nginx Configuration](#nginx-configuration)
-  - [Supervisor Configuration](#supervisor-configuration)
-  - [Nginx in Guangzhou lighthouse](#nginx-in-guangzhou-lighthouse)
-  - [Nginx in Guangzhou cvm](#nginx-in-guangzhou-cvm)
-  - [Nginx in Tokyo](#nginx-in-tokyo)
-  - [Nginx in Mac B](#nginx-in-mac-b)
-  - [Supervisor in Mac B](#supervisor-in-mac-b)
-  - [Supervisor in Guangzhou lighthouse](#supervisor-in-guangzhou-lighthouse)
-  - [Supervisor in Japan Vultr](#supervisor-in-japan-vultr)
+  - [Default](#default)
+    - [Nginx Configuration](#nginx-configuration)
+    - [Supervisor Configuration](#supervisor-configuration)
+  - [Servers](#servers)
+    - [Nginx in Guangzhou lighthouse](#nginx-in-guangzhou-lighthouse)
+    - [Nginx in Guangzhou cvm](#nginx-in-guangzhou-cvm)
+    - [Nginx in Tokyo](#nginx-in-tokyo)
+    - [Nginx in Mac B](#nginx-in-mac-b)
+    - [Supervisor in Guangzhou lighthouse](#supervisor-in-guangzhou-lighthouse)
+    - [Supervisor in Japan Vultr](#supervisor-in-japan-vultr)
+    - [Supervisor in Mac B](#supervisor-in-mac-b)
   - [Reference](#reference)
 
-## Nginx Configuration
+## Default
+
+### Nginx Configuration
 
 Linux:
 
@@ -28,7 +32,7 @@ Mac:
 vim /usr/local/etc/nginx/nginx.conf
 ```
 
-## Supervisor Configuration
+### Supervisor Configuration
 
 Linux:
 
@@ -42,7 +46,9 @@ Mac:
 vim /usr/local/etc/supervisord.conf
 ```
 
-## Nginx in Guangzhou lighthouse
+## Servers
+
+### Nginx in Guangzhou lighthouse
 
 Edit in the default config: `include /web/conf/config/nginxnode/*.conf;`.
 
@@ -52,11 +58,17 @@ Update Nginx server.
 cd /web/conf && git pull && service nginx restart
 ```
 
-## Nginx in Guangzhou cvm
+### Nginx in Guangzhou cvm
+
+Edit in the default config: `include /web/conf/config/mazey-nginx/*.conf;`.
 
 Update Nginx server.
 
-## Nginx in Tokyo
+```
+cd /web/conf && git pull && service nginx restart
+```
+
+### Nginx in Tokyo
 
 Edit in the default config: `include /web/conf/config/nginxgee/*.conf;`.
 
@@ -66,21 +78,13 @@ Update Nginx server.
 cd /web/conf && git pull && systemctl restart nginx
 ```
 
-## Nginx in Mac B
+### Nginx in Mac B
 
 ```
 nginx -s reload
 ```
 
-## Supervisor in Mac B
-
-Edit in the `/usr/local/etc/supervisord.conf`: `files = /Users/mazey/Web/Mazey/conf/config/supervisorb/*.ini`.
-
-```
-brew services restart supervisor
-```
-
-## Supervisor in Guangzhou lighthouse
+### Supervisor in Guangzhou lighthouse
 
 Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisornode/*.ini`.
 
@@ -94,7 +98,7 @@ systemctl enable supervisord
 systemctl restart supervisord
 ```
 
-## Supervisor in Japan Vultr
+### Supervisor in Japan Vultr
 
 Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisorjapan/*.ini`.
 
@@ -102,6 +106,14 @@ Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisorjapan/*
 vim /etc/supervisord.conf
 
 /web/conf/config/supervisorjapan/*.ini
+```
+
+### Supervisor in Mac B
+
+Edit in the `/usr/local/etc/supervisord.conf`: `files = /Users/mazey/Web/Mazey/conf/config/supervisorb/*.ini`.
+
+```
+brew services restart supervisor
 ```
 
 ## Reference
