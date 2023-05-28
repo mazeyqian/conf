@@ -60,7 +60,7 @@ cd /web/conf && git pull && service nginx restart
 
 ### Nginx in Guangzhou cvm
 
-Edit in the default config: `include /web/conf/config/mazey-nginx/*.conf;`.
+Edit in the default config: `include /web/conf/config/nginxmazey/*.conf;`.
 
 Update Nginx server.
 
