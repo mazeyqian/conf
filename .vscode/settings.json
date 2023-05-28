@@ -1,3 +1,3 @@
 {
-  "window.title": "conf${separator}${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}"
+  "window.title": "Conf${separator}${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}"
 }
