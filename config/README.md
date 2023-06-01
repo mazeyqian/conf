@@ -81,6 +81,10 @@ cd /web/conf && git pull && systemctl restart nginx
 ### Nginx in Mac B
 
 ```
+# Start
+/usr/local/bin/nginx
+
+# Reload
 nginx -s reload
 ```
 
