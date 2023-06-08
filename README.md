@@ -1,3 +1,27 @@
 # conf
 
 Conf provides some configurations for standard Linux tools, such as Nginx and Supervisor. It isn't easy to use the same modules in these tools, so the usage will depend on the fixed path in the system.
+
+## Static File Type
+
+All
+
+```
+gif;png;bmp;jpeg;jpg;html;htm;shtml;xml;json;mp3;wma;flv;mp4;wmv;ogg;avi;doc;docx;xls;xlsx;ppt;pptx;txt;pdf;zip;exe;tat;ico;css;js;swf;apk;m3u8;ts
+```
+
+Images, Documents and Executables 
+
+```
+png|jpeg|jpg|gif|ico|webp|mp3|mp4|webm|wma|bmp|swf|flv|wmv|avi|apk|m3u8|doc|docx|xls|xlsx|ppt|pptx|txt|pdf|zip|exe
+```
+
+Web Assets
+
+```
+html|css|js|json|htm|shtml|xml|ts
+```
+
+## Reference
+
+1. Nginx Example: https://nginx.org/en/docs/example.html
