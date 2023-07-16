@@ -46,6 +46,14 @@ Mac:
 vim /usr/local/etc/supervisord.conf
 ```
 
+Modify the file:
+
+```
+[include]
+files = /your/path1/*.ini
+files = /your/path2/*.ini
+```
+
 ## Servers
 
 ### Nginx in Guangzhou lighthouse
@@ -114,10 +122,40 @@ vim /etc/supervisord.conf
 
 ### Supervisor in Mac B
 
-Edit in the `/usr/local/etc/supervisord.conf`: `files = /Users/mazey/Web/Mazey/conf/config/supervisorb/*.ini`.
+Edit in the `/usr/local/etc/supervisord.conf`: `files = /your/path/conf/config/supervisorb/*.ini`.
 
 ```
 brew services restart supervisor
+```
+
+Reload the Supervisor configuration:
+
+```
+supervisorctl reread
+```
+
+Start the program:
+
+```
+supervisorctl start app_name
+```
+
+Stop the program:
+
+```
+supervisorctl stop app_name
+```
+
+Restart the program:
+
+```
+supervisorctl restart app_name
+```
+
+Check the status:
+
+```
+supervisorctl status
 ```
 
 ## Reference
