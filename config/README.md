@@ -22,13 +22,13 @@ The configuration files of Nginx and Supervisor.
 
 Linux:
 
-```
+```shell
 vim /etc/nginx/nginx.conf
 ```
 
 Mac:
 
-```
+```shell
 vim /usr/local/etc/nginx/nginx.conf
 ```
 
@@ -36,19 +36,19 @@ vim /usr/local/etc/nginx/nginx.conf
 
 Linux:
 
-```
+```shell
 vim /etc/supervisord.conf
 ```
 
 Mac:
 
-```
+```shell
 vim /usr/local/etc/supervisord.conf
 ```
 
 Modify the file:
 
-```
+```text
 [include]
 files = /your/path1/*.ini
 files = /your/path2/*.ini
@@ -62,7 +62,7 @@ Edit in the default config: `include /web/conf/config/nginxnode/*.conf;`.
 
 Update Nginx server.
 
-```
+```shell
 cd /web/conf && git pull && service nginx restart
 ```
 
@@ -72,7 +72,7 @@ Edit in the default config: `include /web/conf/config/nginxmazey/*.conf;`.
 
 Update Nginx server.
 
-```
+```shell
 cd /web/conf && git pull && service nginx restart
 ```
 
@@ -82,13 +82,13 @@ Edit in the default config: `include /web/conf/config/nginxgee/*.conf;`.
 
 Update Nginx server.
 
-```
+```shell
 cd /web/conf && git pull && systemctl restart nginx
 ```
 
 ### Nginx in Mac B
 
-```
+```shell
 # Start
 /usr/local/bin/nginx
 
@@ -100,7 +100,7 @@ nginx -s reload
 
 Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisornode/*.ini`.
 
-```
+```shell
 # Init First
 systemctl start supervisord
 systemctl status supervisord
@@ -114,7 +114,7 @@ systemctl restart supervisord
 
 Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisorjapan/*.ini`.
 
-```
+```shell
 vim /etc/supervisord.conf
 
 /web/conf/config/supervisorjapan/*.ini
@@ -124,37 +124,37 @@ vim /etc/supervisord.conf
 
 Edit in the `/usr/local/etc/supervisord.conf`: `files = /your/path/conf/config/supervisorb/*.ini`.
 
-```
+```shell
 brew services restart supervisor
 ```
 
 Reload the Supervisor configuration:
 
-```
+```shell
 supervisorctl reread
 ```
 
 Start the program:
 
-```
+```shell
 supervisorctl start app_name
 ```
 
 Stop the program:
 
-```
+```shell
 supervisorctl stop app_name
 ```
 
 Restart the program:
 
-```
+```shell
 supervisorctl restart app_name
 ```
 
 Check the status:
 
-```
+```shell
 supervisorctl status
 ```
 
