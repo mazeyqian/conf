@@ -4,19 +4,19 @@ Conf provides some configurations for standard Linux tools, such as Nginx and Su
 
 ## Static File Type
 
-All
+All:
 
 ```text
 gif;png;bmp;jpeg;jpg;html;htm;shtml;xml;json;mp3;wma;flv;mp4;wmv;ogg;avi;doc;docx;xls;xlsx;ppt;pptx;txt;pdf;zip;exe;tat;ico;css;js;swf;apk;m3u8;ts
 ```
 
-Images, Documents and Executables
+Images, Documents and Executables:
 
 ```text
 png|jpeg|jpg|gif|ico|webp|mp3|mp4|webm|wma|bmp|swf|flv|wmv|avi|apk|m3u8|doc|docx|xls|xlsx|ppt|pptx|txt|pdf|zip|exe
 ```
 
-Web Assets
+Web Assets:
 
 ```text
 html|css|js|json|htm|shtml|xml|ts
