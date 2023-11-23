@@ -158,6 +158,12 @@ Check the status:
 supervisorctl status
 ```
 
+Default log:
+
+```shell
+tail -f /usr/local/var/log/supervisord.log
+```
+
 ## Reference
 
 - [Server names](http://nginx.org/en/docs/http/server_names.html)
