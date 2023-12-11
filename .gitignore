@@ -36,3 +36,4 @@ package-lock.json
 # Secret files
 *.secret.conf
 *.secret.ini
+*.secret.exe
