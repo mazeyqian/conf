@@ -23,6 +23,7 @@ temp/
 # Local env files
 .env.local
 .env.*.local
+startup-config.json
 
 # Log files
 npm-debug.log*

@@ -22,13 +22,13 @@ The configuration files of Nginx and Supervisor.
 
 Linux:
 
-```shell
+```bash
 vim /etc/nginx/nginx.conf
 ```
 
 Mac:
 
-```shell
+```bash
 vim /usr/local/etc/nginx/nginx.conf
 ```
 
@@ -36,13 +36,13 @@ vim /usr/local/etc/nginx/nginx.conf
 
 Linux:
 
-```shell
+```bash
 vim /etc/supervisord.conf
 ```
 
 Mac:
 
-```shell
+```bash
 vim /usr/local/etc/supervisord.conf
 ```
 
@@ -62,7 +62,7 @@ Edit in the default config: `include /web/conf/config/nginxnode/*.conf;`.
 
 Update Nginx server.
 
-```shell
+```bash
 cd /web/conf && git pull && service nginx restart
 ```
 
@@ -72,7 +72,7 @@ Edit in the default config: `include /web/conf/config/nginxmazey/*.conf;`.
 
 Update Nginx server.
 
-```shell
+```bash
 cd /web/conf && git pull && service nginx restart
 ```
 
@@ -82,31 +82,51 @@ Edit in the default config: `include /web/conf/config/nginxgee/*.conf;`.
 
 Update Nginx server.
 
-```shell
+```bash
 cd /web/conf && git pull && systemctl restart nginx
 ```
 
 ### Nginx in Mac B
 
-```shell
-# Start
-/usr/local/bin/nginx
+Start:
 
-# Reload
+```bash
+/usr/local/bin/nginx
+```
+
+Reload:
+
+```bash
 nginx -s reload
+```
+
+Stop:
+
+```bash
+nginx -s stop
+```
+
+Check the status:
+
+```bash
+nginx -t
 ```
 
 ### Supervisor in Guangzhou lighthouse
 
 Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisornode/*.ini`.
 
-```shell
-# Init First
+Init:
+
+```bash
 systemctl start supervisord
 systemctl status supervisord
 systemctl enable supervisord
+```
 
-# Restart
+Restart:
+
+```bash
 systemctl restart supervisord
 ```
 
@@ -114,7 +134,7 @@ systemctl restart supervisord
 
 Edit in the `/etc/supervisord.conf`: `files = /web/conf/config/supervisorjapan/*.ini`.
 
-```shell
+```bash
 vim /etc/supervisord.conf
 
 /web/conf/config/supervisorjapan/*.ini
@@ -124,43 +144,43 @@ vim /etc/supervisord.conf
 
 Edit in the `/usr/local/etc/supervisord.conf`: `files = /your/path/conf/config/supervisorb/*.ini`.
 
-```shell
+```bash
 brew services restart supervisor
 ```
 
 Reload the Supervisor configuration:
 
-```shell
+```bash
 supervisorctl reread
 ```
 
 Start the program:
 
-```shell
+```bash
 supervisorctl start app_name
 ```
 
 Stop the program:
 
-```shell
+```bash
 supervisorctl stop app_name
 ```
 
 Restart the program:
 
-```shell
+```bash
 supervisorctl restart app_name
 ```
 
 Check the status:
 
-```shell
+```bash
 supervisorctl status
 ```
 
 Default log:
 
-```shell
+```bash
 tail -f /usr/local/var/log/supervisord.log
 ```
 
