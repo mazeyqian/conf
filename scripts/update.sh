@@ -1,2 +1,2 @@
-cd /web/i.mazey.net/lib
+cd /web/conf
 git pull
