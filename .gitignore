@@ -23,6 +23,7 @@ temp/
 # Local env files
 .env.local
 .env.*.local
+startup-config.json
 
 # Log files
 npm-debug.log*
@@ -36,3 +37,4 @@ package-lock.json
 # Secret files
 *.secret.conf
 *.secret.ini
+*.secret.exe
