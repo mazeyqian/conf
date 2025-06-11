@@ -10,10 +10,10 @@ The configuration files of Nginx and Supervisor.
     - [Nginx in Guangzhou lighthouse](#nginx-in-guangzhou-lighthouse)
     - [Nginx in Guangzhou cvm](#nginx-in-guangzhou-cvm)
     - [Nginx in Tokyo](#nginx-in-tokyo)
-    - [Nginx in Mac B](#nginx-in-mac-b)
+    - [Nginx in macOS](#nginx-in-macos)
     - [Supervisor in Guangzhou lighthouse](#supervisor-in-guangzhou-lighthouse)
     - [Supervisor in Japan Vultr](#supervisor-in-japan-vultr)
-    - [Supervisor in Mac B](#supervisor-in-mac-b)
+    - [Supervisor in macOS](#supervisor-in-macos)
   - [Reference](#reference)
 
 ## Default
@@ -86,7 +86,7 @@ Update Nginx server.
 cd /web/conf && git pull && systemctl restart nginx
 ```
 
-### Nginx in Mac B
+### Nginx in macOS
 
 Start:
 
@@ -140,7 +140,7 @@ vim /etc/supervisord.conf
 /web/conf/config/supervisorjapan/*.ini
 ```
 
-### Supervisor in Mac B
+### Supervisor in macOS
 
 Edit in the `/usr/local/etc/supervisord.conf`: `files = /your/path/conf/config/supervisorb/*.ini`.
 
